@@ -30,8 +30,6 @@ export default function BasicSelect() {
     fetchData()
   }, [])
 
-  console.log("prize = ", prize)
-
   return (
     <Box sx={{ minWidth: 220 }} >
       <FormControl fullWidth>

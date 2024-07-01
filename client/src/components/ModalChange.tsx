@@ -31,11 +31,9 @@ export default function ModalChange() {
     const name = useAppSelector(state => state.akred.name)
     const countSendPrize = useAppSelector(state => state.akred.countSendPrize)
 
-    console.log("name = ", name)
 
     const sendForm = async () => {
         const data ={id: changeCurrentElemId, name: name, date: `${new Date()}`, countSendPrize: countSendPrize }
-        console.log("SDKPOSKFMSIODL = ", data)
         dispatch(changeModalSost())
       
         // eslint-disable-next-line @typescript-eslint/no-unused-vars

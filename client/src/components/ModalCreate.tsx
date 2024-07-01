@@ -5,7 +5,6 @@ import { useAppDispatch, useAppSelector } from '../hooks/hook';
 import { changeCountSendPrize, changeName, createModalSost } from '../hooks/reducer';
 import { Button, TextField } from '@mui/material';
 import BasicSelect from './SelectPrize';
-import { useState } from 'react';
 import { createPromotion } from '../request';
 
 
@@ -30,16 +29,12 @@ export default function BasicModal() {
     const dispatch = useAppDispatch()
     const name = useAppSelector(state => state.akred.name)
     const countSendPrize = useAppSelector(state => state.akred.countSendPrize)
-    const [gg, setGg] = useState()
-    console.log("name = ", name)
 
     const sendForm = async () => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const data = await createPromotion({ name: name, date: `${new Date()}`, countSendPrize: countSendPrize })
         dispatch(createModalSost())
-        setGg(data)
     }
-
-    console.log("slr = ", gg)
 
 
     return (

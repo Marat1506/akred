@@ -44,14 +44,11 @@ export default function BasicTable() {
             fetchData();
         }
     };
-    console.log("DATAAAAAAAF = ", data)
 
     const handleChange = async (id: string) => {
         dispatch(changeModalSost());
-        console.log("ЭТО AЙДИ = ", id)
         dispatch(changeCurrentElemId({changeCurrentElemId: id}))
         const promotion = await getByIdPromotion(id);
-        console.log("eggg = ", promotion);
         dispatch(changeName({name: promotion.name}))
         dispatch(changeCountSendPrize({countSendPrize: promotion.countSendPrize}))
       
