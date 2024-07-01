@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "667edcd250c983541ff40d34"
+  },
+  "name": "Крыло Boeing 737",
+  "count": 6,
+  "dateKill": "30.06",
+  "nominal": 178000000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667edcfe50c983541ff40d36"
+  },
+  "name": "2 Крыла Boeing 737",
+  "count": 6,
+  "dateKill": "30.06",
+  "nominal": 178000000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "667edd1750c983541ff40d38"
+  },
+  "name": "шаурма",
+  "count": 6,
+  "dateKill": "30.06",
+  "nominal": 178000000,
+  "__v": 0
+}]
