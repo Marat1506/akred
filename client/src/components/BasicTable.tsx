@@ -11,10 +11,16 @@ import { Button } from '@mui/material';
 import { deletePromotion, getByIdPromotion, getPromotion } from '../request';
 import { useEffect, useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../hooks/hook';
-import { changeCountSendPrize, changeCurrentElemId, changeModalSost, changeName, createModalSost } from '../hooks/reducer';
-import { Promotion } from './Table';
+import { changeCountSendPrize, changeCurrentElemId, changeModalSost, changeName } from '../hooks/reducer';
 
 
+interface Promotion {
+    _id: string,
+    name: string,
+    date: string,
+    countSendPrize: number,
+
+}
 
 export default function BasicTable() {
     const [data, setData] = useState<Promotion[]>([]);
@@ -67,7 +73,7 @@ export default function BasicTable() {
                 <TableBody>
                     {data.map((prom) => (
                         <TableRow
-                            key={prompt.name}
+                            key={prom._id}
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
                             <TableCell align="right">{prom.name}</TableCell>
